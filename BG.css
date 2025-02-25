@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(270deg, #ff6b6b, #6b6bff, #6bff6b, #ffff6b);
+    background-size: 400% 400%;
+    animation: bgAnimation 10s infinite alternate;
+}
+
+@keyframes bgAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.fighter {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: url('https://www.youtube.com/watch?v=hKeNILcV6Lw&ab_channel=Daviando') ;
+    background-size: contain;
+    animation: fightAnimation 1s infinite steps(3);
+}
+
+@keyframes fightAnimation {
+    0% { transform: translateX(0px) scaleX(1); }
+    50% { transform: translateX(50px) scaleX(1); }
+    100% { transform: translateX(0px) scaleX(-1); }
+}
